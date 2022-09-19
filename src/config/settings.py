@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 import environ
 from pathlib import Path
 
-env = environ.ENV(
+env = environ.Env(
   DEBUG=(bool, False)
 )
 environ.Env.read_env()
@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # local
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -116,6 +119,9 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+# User Setting
+AUTH_USER_MODEL = 'accounts.CustomUser'
 
 
 # Static files (CSS, JavaScript, Images)

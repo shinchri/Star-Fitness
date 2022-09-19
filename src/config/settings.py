@@ -44,8 +44,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # 3rd party
+    'crispy_forms',
+    'crispy_bootstrap5',
+
     # local
     'accounts',
+    'main',
 ]
 
 MIDDLEWARE = [
@@ -120,6 +125,11 @@ USE_I18N = True
 
 USE_TZ = True
 
+# Crispy Bootstrap
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
 # User Setting
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
@@ -128,6 +138,10 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'static'
+
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

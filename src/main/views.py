@@ -6,3 +6,6 @@ from django.views import generic
 # Create your views here.
 class MainView(generic.TemplateView):
   template_name = 'main/main.html'
+
+class HomeView(generic.TemplateView):
+  template_name = 'main/index.html'

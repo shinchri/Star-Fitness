@@ -1,6 +1,49 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
-{% block title %}{% endblock %}
+{% block title %}Star Fitness - Home{% endblock %}
 
-{% block body %}{% endblock %}
+<!-- Extend for more links -->
+{% block head %}{% endblock %}
+
+<!-- Body -->
+{% block body %}
+<section>
+  <div class="header">
+    <div class="p-5 text-center mb-5 bg-light">
+      <h1 class="mb-3">StarFitness</h1>
+      <h4 class="mb-5">Start fitness today to get your energy back to your life!</h4>
+      <a class="btn btn-primary" href="" role="button">Get Started</a>
+    </div>
+  </div>
+
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-sm-5 col-md-12">
+        <div class="row">
+          <div class="col">
+            <img src="{% static 'image/exercise-main.jpeg' %}" alt="" />
+          </div>
+          <div class="col d-flex align-items-center">
+            <div>
+              <h6>FREE FOR EVERYONE!</h6>
+
+              <h2 class="mb-5">DOWNLOAD OUR APP FOR FREE WORKOUTS AND MORE!</h2>
+              <p>
+                At Home Workout Videos & Tracking: Planet Fitness has hundreds of workout videos and tutorials to keep you moving at home. Plus, you can track all of your hard work.
+              </p>
+              <p>
+                Work Out with Erica Lugo: Check out 8 workouts guided by The Biggest Loser fitness expert, and real life Planet Fitness member, Erica Lugo!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+{% endblock %}
+
+<!-- Extend for more scripts-->
+{% block end %}{% endblock %}

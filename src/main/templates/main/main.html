@@ -7,23 +7,23 @@
   <div class='bg-image text-center shadow-1-strong rounded text-white' style="background-image: url({% static 'image/exercise-main.jpeg' %}); height: 100vh ;background-size: cover; background-repeat: no-repeat;">
     <div class="mask " style="background-color: rgba(0, 0, 0, 0.6); height: 100vh;">
       <!-- Nav -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 5vh">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-transparant" style="height: 5vh">
         <!-- Container wrapper -->
-        <div class="container-fluid">
+        <div class="container-fluid purple-600">
       
           <!-- Collapsible wrapper -->
             <!-- Left links -->
-            <ul class="d-flex me-auto mb-2 mb-lg-0">
+            <ul class="nav d-flex me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">StarFitness</a>
+                <a class="nav-link active link-light" aria-current="page" href="#">StarFitness</a>
               </li>
             </ul>
             <!-- Right links -->
-            <ul class="d-flex justify-content-end ms-auto mb-2 mb-lg-0">
+            <ul class="nav d-flex justify-content-end ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'main:home' %}">Home</a>
+                <a class="nav-link active link-light" aria-current="page" href="{% url 'main:home' %}">Home</a>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Login</a>
+                  <a class="nav-link active link-light" aria-current="page" href="#">Login</a>
                 </li>
               </li>
             </ul>

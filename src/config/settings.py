@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     # 3rd party
     'crispy_forms',
     'crispy_bootstrap5',
+    'fontawesomefree',
 
     # local
     'accounts',

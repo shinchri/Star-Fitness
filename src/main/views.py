@@ -9,3 +9,6 @@ class MainView(generic.TemplateView):
 
 class HomeView(generic.TemplateView):
   template_name = 'main/index.html'
+
+class MemberView(generic.TemplateView):
+  template_name = 'main/member.html'

@@ -23,7 +23,7 @@
               <li class="nav-item">
                 <a class="nav-link active link-light" aria-current="page" href="{% url 'main:home' %}">Home</a>
                 <li class="nav-item">
-                  <a class="nav-link active link-light" aria-current="page" href="#">Login</a>
+                  <a class="nav-link active link-light" aria-current="page" href="{% url 'account_login' %}">Login</a>
                 </li>
               </li>
             </ul>
@@ -37,7 +37,7 @@
 
         <h1 class="mb-3">Welcome to StarFitness!</h1>
         <h4 class="mb-5">{% lorem 1 b random %}</h4>
-        <a class="btn btn-outline-light btn-lg" href="" role="button">Register</a>
+        <a class="btn btn-outline-light btn-lg" href="{% url 'account_signup' %}" role="button">Register</a>
       </div>
     </div>
   </div>

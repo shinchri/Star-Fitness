@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block title %}Star Fitness - Login{% endblock %}
+
+<!-- Extend for more links -->
+{% block head %}{% endblock %}
+
+<!-- Body -->
+{% block body %}
+<section class="container">
+  <h2>Log In</h2> 
+  <form method="post">
+    {% csrf_token %}
+    {{ form | crispy }}
+    <button class="btn btn-success" type="submit">Log In</button>
+  </form>
+</section>
+{% endblock %}
+
+<!-- Extend for more scripts-->
+{% block end %}{% endblock %}

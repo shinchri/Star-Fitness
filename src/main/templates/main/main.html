@@ -22,10 +22,16 @@
             <ul class="nav d-flex justify-content-end ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active link-light" aria-current="page" href="{% url 'main:home' %}">Home</a>
-                <li class="nav-item">
-                  <a class="nav-link active link-light" aria-current="page" href="{% url 'account_login' %}">Login</a>
-                </li>
               </li>
+              {% if not request.user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link active link-light" aria-current="page" href="{% url 'account_login' %}">Login</a>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link active link-light" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+              </li>
+              {% endif %}
             </ul>
           <!-- Collapsible wrapper -->
         </div>

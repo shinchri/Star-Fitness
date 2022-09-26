@@ -12,3 +12,18 @@ class CustomUser(AbstractUser):
 
   def __str__(self):
     return self.email
+
+class Membership(models.Model):
+  name = models.CharField(max_length=100)
+  priceId = models.CharField(max_length=255)
+
+  def __str__(self):
+    return f"{self.name} ({self.priceId})"
+
+class StripeCustomer(models.Model):
+  user = models.OneToOneField(to=CustomUser, on_delete=models.CASCADE)
+  stripeCustomerId = models.CharField(max_length=255)
+  stripeSubscriptionId = models.CharField(max_length=255)
+
+  def __str__(self):
+    return self.user.email

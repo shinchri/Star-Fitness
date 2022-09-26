@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Star Fitness - Payment Cancelled{% endblock %}
+
+<!-- Extend for more links -->
+{% block head %}{% endblock %}
+
+<!-- Body -->
+{% block body %}
+<section class="container">
+  <p>You have cancelled the checkout.</p>
+  <p><a class="btn btn-primary" href="{% url "main:home" %}">Return to Home</a></p>
+  
+</section>
+{% endblock %}
+
+<!-- Extend for more scripts-->
+{% block end %}{% endblock %}

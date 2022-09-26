@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
 from accounts.forms import CustomUserCreationForm, CustomUserChangeForm
-from .models import CustomUser
+from .models import CustomUser, StripeCustomer, Membership
 
 # Register your models here.
 class CustomUserAdmin(UserAdmin):
@@ -29,4 +29,9 @@ class CustomUserAdmin(UserAdmin):
         "user_permissions",
     )
 
+class MembershipAdmin(admin.ModelAdmin):
+  list_display = ('id', 'name', 'priceId')
+
 admin.site.register(CustomUser, CustomUserAdmin)
+admin.site.register(StripeCustomer)
+admin.site.register(Membership, MembershipAdmin)

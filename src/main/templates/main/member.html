@@ -4,20 +4,17 @@
 {% block title %}Star Fitness - Member{% endblock %}
 
 <!-- Extend for more links -->
-{% block head %}{% endblock %}
+{% block head %}
+<link href="{% static 'css/member-style.css' %}" rel="stylesheet">
+{% endblock %}
 
 <!-- Body -->
 {% block body %}
 <section>
-  <h1>Member</h1>
   {% if request.user.is_authenticated and subscription.status == 'active' %}
     <p>You are subscribed now</p>
   {% else %}
-    {% if request.user.is_authenticated %}
-      <button type="submit" class="btn btn-primary" id="submitBtn">Subscribe</button>
-    {% else %}
-      <p>You need to login to subscribe</p>
-    {% endif %}
+    {% include 'main/partials/member-subscription.html' %}
   {% endif %}
 </section>
 {% endblock %}

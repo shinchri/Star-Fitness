@@ -1,0 +1,37 @@
+<div class="container mt-5">
+  <h1 class="member-head">Member Subscription</h1>
+  <div class="d-flex flex-row bd-hightlight mb-2 justify-content-evenly">
+    <div class="bd-highlight pricing-card">
+      <h3 class="pricing-card-header">Monthly</h3>
+      <div class="price"><sup>$</sup>25<span>/MO</span></div>
+      <ul>
+        <li>Unlimited Access to Home Club</li>
+        <li>Free Fitness Training</li>
+        <li>Free Wifi</li>
+        <li>-</li>
+        <li>-</li>
+      </ul>
+      {% if request.user.is_authenticated %}
+        <a id="submitBtn1" class="order-btn">Subscribe</a>
+      {% else %}
+        <a href="{% url 'account_login' %}" class="order-btn">Login to Subscribe</a>
+      {% endif %}
+    </div>
+    <div class="bd-highlight pricing-card">
+      <h3 class="pricing-card-header">Yearly</h3>
+      <div class="price"><sup>$</sup>250<span>/YR</span></div>
+      <ul>
+        <li>Unlimited Access to Home Club</li>
+        <li>Free Fitness Training</li>
+        <li>Free Wifi</li>
+        <li>Use of Tanning</li>
+        <li>Use of Massage Chairs</li>
+      </ul>
+      {% if request.user.is_authenticated %}
+        <a id="submitBtn2" class="order-btn">Subscribe</a>
+      {% else %}
+        <a href="{% url 'account_login' %}" class="order-btn">Login to Subscribe</a>
+      {% endif %}
+    </div>
+  </div>
+</div>

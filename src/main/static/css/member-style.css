@@ -92,3 +92,28 @@ section{
   background-color: #0fbcf9;
   color: #fff;
 }
+
+/* member-subscribed */
+
+.pricing-table {
+  margin: 80px 0;
+
+}
+
+.member-card {
+  border: 2px solid #0fbcf9;
+  box-shadow: 10px 10px 10px #0fbcf9;
+  margin-bottom: 50px;
+  padding: 10px;
+}
+
+.member-text {
+  padding-left: 40px;
+  width: 100%;
+}
+
+.member-img {
+  display: inline;
+  width: 20%;
+  height: 20%;
+}

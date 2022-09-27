@@ -12,7 +12,7 @@
 {% block body %}
 <section>
   {% if request.user.is_authenticated and subscription.status == 'active' %}
-    <p>You are subscribed now</p>
+    {% include 'main/partials/member-subscribed.html' %}
   {% else %}
     {% include 'main/partials/member-subscription.html' %}
   {% endif %}
